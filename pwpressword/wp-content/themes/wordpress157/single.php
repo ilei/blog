@@ -17,13 +17,13 @@
 			<!-- 内容 -->
 			<div id="single-con">
 				<?php
-					//广告
+//广告
 					if(dopt('Rcloud_signleTop_ad_c')){
 						echo '<div class="Rcloud_signleTop_ad"><center>'.dopt('Rcloud_signleTop_ad').'</center></div>';
 					}
 				?>
 				<?php include_once 'template/media.php'; ?>
-				<?php the_content(); ?>
+                <?php the_content(); ?>
 			</div>
 			<div class="single-tags">标签：<?php the_tags('',' '); ?></div>
 		<?php endwhile; endif; ?>
@@ -48,7 +48,7 @@
 		<?php include_once 'template/relevance.php'; ?>
 		<!-- 评论 -->
 		<div class="part"><?php comments_template(); ?></div>
-	</div>
+	      </div>
 	<?php get_sidebar(); ?>
 	<div class="cc"></div>
 </div></div>

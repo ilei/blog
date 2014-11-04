@@ -1073,7 +1073,7 @@ function dynamic_sidebar($index = 1) {
 		 *     @type array          $_callback   When the hook is fired on the back-end, $_callback is populated
 		 *                                       with an array containing the widget object, see $callback.
 		 * }
-		 */
+         */
 		do_action( 'dynamic_sidebar', $wp_registered_widgets[ $id ] );
 
 		if ( is_callable($callback) ) {

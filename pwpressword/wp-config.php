@@ -15,13 +15,13 @@
 
 // ** MySQL 设置 - 具体信息来自您正在使用的主机 ** //
 /** WordPress数据库的名称 */
-define('DB_NAME', 'wp_blog');
+define('DB_NAME', '');
 
 /** MySQL数据库用户名 */
-define('DB_USER', 'root');
+define('DB_USER', '');
 
 /** MySQL数据库密码 */
-define('DB_PASSWORD', 'wangsong4293346');
+define('DB_PASSWORD', '');
 
 /** MySQL主机 */
 define('DB_HOST', 'localhost');
@@ -42,14 +42,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '|0OL*zoNOSqz{Y^*o;qwN{y{0q^4bSZCkhLWQ4%:^>v|]9+/xDrtA%n~N-+zRm|a');
-define('SECURE_AUTH_KEY',  '|`Za!S7Wp=Fc4}zPdX:0@0@]6%gN+-/$Z|>t_&=d^t{m@&]2v]i[|H>#-(]ojs|R');
-define('LOGGED_IN_KEY',    ' =,}*n$*aik%Ha}T9AE-/*.&ae~o_bY>(~7-iCWXB:Wx?u)Vn&Rh6b3-j2&VYz.d');
-define('NONCE_KEY',        'OQ 3kA-07b|s.A7+qg @ZDk*uN)20++ZT#O:Y3.jR8%$:xR3f9f^WcK{0F9)1==[');
-define('AUTH_SALT',        '>XoqmAz{AeG@MEPt8p*3s.k-{9bC%u02aV0g+lyH.V,]RQ1Q92-J0t0sGPZ]-&*k');
-define('SECURE_AUTH_SALT', 'tFMOY{yj68,z53|{S9Ht#3:[w(xyCs[_t$NhXmqb|0U,R~5!>iy.rra6YWb+OS^[');
-define('LOGGED_IN_SALT',   'yH^A% /FIh=t|=A.`7 !mmhc|i,#a15o-}Uxo6m]V~?:y!V0b8==:zelL6v9Ccg*');
-define('NONCE_SALT',       'o|N7piOsdWp!?{LP51Rx+_`?X-<$)kK&W0CzsJE%B-a_h4Nx8./0]HN%_>^P&I@f');
+define('AUTH_KEY',         '');
+define('SECURE_AUTH_KEY',  '');
+define('LOGGED_IN_KEY',    '');
+define('NONCE_KEY',        '');
+define('AUTH_SALT',        '');
+define('SECURE_AUTH_SALT', '');
+define('LOGGED_IN_SALT',   '');
+define('NONCE_SALT',       '');
 
 /**#@-*/
 
@@ -59,7 +59,7 @@ define('NONCE_SALT',       'o|N7piOsdWp!?{LP51Rx+_`?X-<$)kK&W0CzsJE%B-a_h4Nx8./0
  * 如果您有在同一数据库内安装多个WordPress的需求，请为每个WordPress设置
  * 不同的数据表前缀。前缀名只能为数字、字母加下划线。
  */
-$table_prefix  = 'wpb_';
+$table_prefix  = '';
 
 /**
  * 开发者专用：WordPress调试模式。

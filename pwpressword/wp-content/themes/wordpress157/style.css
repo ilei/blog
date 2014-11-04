@@ -10,6 +10,8 @@ Version: 1.5.1
 /***********************************************
  *     全局
  **********************************************/
+@import url('./css/slimbox2.css');
+@import url('./css/prettify.css');
 *{ zoom:1; }
 html {
     margin: 0 !important;

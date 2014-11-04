@@ -13,9 +13,7 @@
 	<!--KEY-->
 	<?php include_once 'inc/key.php'; ?>
 	<!--调用STYLE样式表-->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/slimbox2.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/prettify.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 </head>
 <body><div id="page">
 <!-- 顶部 -->
