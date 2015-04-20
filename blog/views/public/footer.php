@@ -6,6 +6,7 @@
       <nav>
         <ul>
           <li><a href="/">首页</a></li>
+          <li><a href="<?php echo site_url('/fan');?>">随笔</a></li>
           <?php if(isset($cates) && $cates):?>
           <?php foreach($cates as $key => $cate):?>
           <li><a href="<?php echo '/article/category/' . $cate['id'];?>"><?php echo htmlspecialchars($cate['name']);?></a></li>
@@ -17,6 +18,6 @@
       <div class="clear"></div>
     </footer>
     </div>
-<div class="clear"></div>
+<iv class="clear"></div>
 </body>
 </html> 

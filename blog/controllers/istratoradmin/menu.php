@@ -53,7 +53,7 @@ class Menu extends Admin_Controller{
     public function pinyinExist($mpinyin){
         $exist = $this->MMenu->getBy('pinyin', trim($mpinyin));
         if($exist){
-            $this->from_validation->set_message('pinyinExist', '拼音已存在!');
+            $this->form_validation->set_message('pinyinExist', '拼音已存在!');
             return false;
         }else{
             return true;

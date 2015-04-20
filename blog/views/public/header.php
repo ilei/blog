@@ -25,6 +25,6 @@
          <h1>
             <a class="nm-logo" id="secondary-logo" href="http://smartlei.com">享受编程，创造艺术。</a> 
          </h1>
-        <p>追随自己的兴趣，时刻保持自信，Following your interests，keeping confidence to yourself。</p>
+        <p>追随自己的兴趣，时刻保持激情，Following your interests，keeping passions to yourself。</p>
         <div class="clear"></div>          
       </header> 

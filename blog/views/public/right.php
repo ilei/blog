@@ -1,7 +1,7 @@
 <div id="sidebar">
     <div id="work">
         <img class="portrait" src="/static/images/ilei.jpg">
-            <p>lei,80末,程序猿一枚,2012年就开始敲代码了,目前仍然很菜..... 追随自己的兴趣,时刻保持自信. 
+            <p>lei,80末,程序猿一枚,2012年就开始敲代码了,目前仍然很菜..... 追随自己的兴趣,时刻保持激情. 
         <a href="###" style="font-weight: 800;display:none;">About Me 更多...</a></p>
         <nav id="elsewhere">      
             <div class="clear"></div>
