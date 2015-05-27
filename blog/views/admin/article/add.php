@@ -20,7 +20,25 @@
                 <input type="hidden" name="aid" value="<?php echo isset($article) ? $article['id'] : 0;?>">
                 <input type="text" class="am-input-sm" name="atitle" value="<?php echo isset($article) ? $article['name'] : '';?>">
             </div>
-            <div class="am-u-sm-6">*必填，不可重复</div>
+            <div class="am-u-sm-6">*必填,不可重复</div>
+          </div>
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              关键字 
+            </div>
+            <div class="am-u-sm-4">
+                <input type="text" class="am-input-sm" name="keywords" value="<?php echo isset($article) ? $article['keywords'] : '';?>">
+            </div>
+            <div class="am-u-sm-6">*必填</div>
+          </div>
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+                简介 
+            </div>
+            <div class="am-u-sm-4">
+                <textarea  class="am-input-sm" name="desc"><?php echo isset($article) ? $article['description'] : '';?></textarea>
+            </div>
+            <div class="am-u-sm-6">*必填</div>
           </div>
           <div class="am-g am-margin-top">
             <div class="am-u-sm-2 am-text-right">

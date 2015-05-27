@@ -33,7 +33,10 @@ class Article extends MY_Controller{
             show_404();
         }
         $data = array();
-        $data['article'] = $article[0];
+        $data['article']       = $article[0];
+        $this->meta_keywords[] = $article[0]['keywords'];
+        $this->title[]         = $article[0]['name'];
+        $this->meta_desc       = $article[0]['description'];
         $this->display('front/article/content', $data);
     }
 }

@@ -32,7 +32,9 @@ class Article extends Admin_Controller{
         }else{
             $post = $this->input->post();
             $data['name'] = isset($post['atitle']) && $post['atitle'] ? trim($post['atitle']) : '';
-            $data['content'] = isset($post['acontent']) && $post['acontent'] ? trim($post['acontent']) : '';
+            $data['content']  = isset($post['acontent']) && $post['acontent'] ? trim($post['acontent']) : '';
+            $data['keywords'] = isset($post['keywords']) && $post['keywords'] ? trim($post['keywords']) : '';
+            $data['description'] = isset($post['desc']) && $post['desc'] ? trim($post['desc']) : '';
             $data['url'] = isset($post['aurl']) && $post['aurl'] ? trim($post['aurl']) : '';
             $data['author'] = $this->auth->currentUser['realname']; 
             $data['cate_id'] = isset($post['acate']) && $post['acate'] ? intval($post['acate']) : 0;
@@ -78,6 +80,8 @@ class Article extends Admin_Controller{
             $data['url'] = isset($post['aurl']) && $post['aurl'] ? trim($post['aurl']) : '';
             $data['author'] = $this->auth->currentUser['realname']; 
             $data['cate_id'] = isset($post['acate']) && $post['acate'] ? intval($post['acate']) : 0;
+            $data['keywords'] = isset($post['keywords']) && $post['keywords'] ? trim($post['keywords']) : '';
+            $data['description'] = isset($post['desc']) && $post['desc'] ? trim($post['desc']) : '';
             if($data['cate_id']){
                 $cate = $this->MCategory->get($data['cate_id']);
                 $data['cate_name'] = $cate ? $cate[0]['name'] : '';
