@@ -34,6 +34,5 @@ class MY_Controller extends CI_Controller{
     }
 }
 
-require_once('Admin_Controller.php');
 /* End of file MY_Controller.php */
 /* Location: ./MY_Controller.php */

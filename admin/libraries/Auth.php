@@ -5,8 +5,8 @@ class Auth {
     
     public function __construct() {
         $this->CI = & get_instance();
-        $this->CI->load->model('MUser');
-        $this->currentUser = $this->CI->MUser->current();
+        $this->CI->load->model('Users');
+        $this->currentUser = $this->CI->Users->current();
     }
   
     public function requireLogin() {
@@ -20,11 +20,11 @@ class Auth {
     }
 
     public function login($user) {
-        $this->CI->MUser->setCurrent($user);
+        $this->CI->Users->setCurrent($user);
     }
 
     public function logout() {
-        $this->CI->MUser->setCurrent();
+        $this->CI->Users->setCurrent();
     }
 
     public function password($password, $salt){
