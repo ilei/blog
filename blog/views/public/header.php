@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE HTML>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -9,22 +9,34 @@
     <meta name="author" content="ilei">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
-    <link rel="stylesheet" href="/static/css/base.css?v=<?php echo $last_release;?>">
-    <!--
-    <script type="text/javascript" src="http://use.typekit.com/atw0rqs.js"></script>
-    -->
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <link rel="stylesheet" href="/static/blog/css/style.css?v=<?php echo $last_release;?>">
+    <link rel="stylesheet" href="/static/blog/css/index.css?v=<?php echo $last_release;?>">
+    <script type="text/javascript" src="/static/blog/js/jquery1.42.min.js"></script>
+    <script type="text/javascript" src="/static/blog/js/jquery.SuperSlide.2.1.1.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
 </head>
 <body>
-<div id="container">
-   <div id="logo">&nbsp;
-       <a class="nm-logo" href="http://smartlei.com">首页</a>  
-   </div>
-   <div id="main-column">
-        <header>                
-         <h1>
-            <a class="nm-logo" id="secondary-logo" href="http://smartlei.com">享受编程，创造艺术。</a> 
-         </h1>
-        <p>追随自己的兴趣，时刻保持激情，Following your interests，keeping passions to yourself。</p>
-        <div class="clear"></div>          
-      </header> 
+    <!--header start-->
+    <div id="header">
+      <h1>享受编程，创造艺术。</h1>
+      <p>追随自己的兴趣，时刻保持激情，Following your interests，keeping passions to yourself。</p>    
+    </div>
+     <!--header end-->
+    <!--nav-->
+     <div id="nav">
+        <ul>
+         <li><a href="<?php echo site_url();?>">首页</a></li>
+         <li><a href="<?php echo site_url();?>">博客</a></li>
+        <!-- <li><a href="about.html">关于我</a></li>
+         <li><a href="shuo.html">碎言碎语</a></li>
+         <li><a href="riji.html">个人日记</a></li>
+         <li><a href="xc.html">相册展示</a></li>
+         <li><a href="learn.html">学无止境</a></li>
+         <li><a href="guestbook.html">留言板</a></li>
+        -->
+         <div class="clear"></div>
+        </ul>
+      </div>
+       <!--nav end-->

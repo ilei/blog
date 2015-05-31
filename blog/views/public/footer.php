@@ -1,23 +1,9 @@
-   </div>
-   <div class="clear"></div>
-    <footer>
-    <div class="logo"><h1>ILEI'S BLOG&nbsp;</h1>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/">首页</a></li>
-          <li><a href="<?php echo site_url('/fan');?>">随笔</a></li>
-          <?php if(isset($cates) && $cates):?>
-          <?php foreach($cates as $key => $cate):?>
-          <li><a href="<?php echo '/article/category/' . $cate['id'];?>"><?php echo htmlspecialchars($cate['name']);?></a></li>
-          <?php endforeach;?>
-          <?php endif;?>
-        </ul>
-      </nav>
-      <p id="fine-print">Copyright © 2012 - smartlei.com</p>
-      <div class="clear"></div>
-    </footer>
-    </div>
-<iv class="clear"></div>
+ <!--footer start-->
+ <div id="footer">
+   <p>Copyright © 2012 - smartlei.com</p>
+ </div>
+    <!--footer end-->
+    <script type="text/javascript">jQuery(".lanmubox").slide({easing:"easeOutBounce",delayTime:400});</script>
+    <script  type="text/javascript" src="/static/blog/js/nav.js"></script>
 </body>
-</html> 
+</html>
