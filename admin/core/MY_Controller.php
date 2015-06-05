@@ -20,7 +20,7 @@ class MY_Controller extends CI_Controller{
             'modules'           => $this->module,
             'last_release'      => C('release.last_release'),
         ));
-        $this->load->view('public/' . $template);
+        $this->load->view('common/' . $template);
     }
 
     public function loadHtml($page, $data = array()){
