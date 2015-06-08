@@ -2,9 +2,9 @@
   <ul class="nav navbar-nav">
 	<li><a target="_blank" href="http://www.smartlei.com"><i class="fa fa-home"></i> 平台主页</a></li>
 	<li class="submenu open">
-	  <a href="#"><i class="fa fa-users"></i> 网站管理 <i class="fa fa-angle-down"></i></a>
+	  <a href="#"><i class="fa fa-users"></i> 业务管理<i class="fa fa-angle-down"></i></a>
 	  <ul>
-		<li class="active"><a href="#"><i class="fa fa-users"></i> 网站列表</a></li>
+	  	<li class="active"><a href="<?php echo site_url();?>"><i class="fa fa-users"></i> 网站管理</a></li>
 		<li><a href=""><i class="fa fa-cogs"></i> 权限管理</a></li>
 		<li><a href=""><i class="fa fa-signal"></i> 等级管理</a></li>
 	  </ul>
