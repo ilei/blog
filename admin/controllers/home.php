@@ -56,8 +56,8 @@ class Home extends MY_Controller{
 				if($bank){
 					$this->load->model('WebSiteBank');
 					$save = array(
-						'bank_name'    => trim($bank[0]),
-						'bank_user'    => trim($bank[1]),
+						'bank_name'    => mb_substr(trim($bank[0]), 0, strlen($bank[0]), 'utf-8'),
+						'bank_user'    => mb_substr(trim($bank[1]), 0, strlen($bank[1]), 'utf-8'),
 						'bank_account' => trim($bank[2]),
 						'website_id'   => $id,
 					);
@@ -67,13 +67,16 @@ class Home extends MY_Controller{
 					$this->load->model('WebSiteQQ');
 					$save = array(
 						'qq' 		  => trim($qq[0]),
-						'desc' 		  => trim($qq[1]),
+						'desc' 		  => mb_substr(trim($qq[1]), 0, strlen($qq[1]), 'utf-8'),
 						'website_id'  => $id,
 					);
 					$this->WebSiteQQ->save($save);
 				}
 				if($ba){
 					$this->load->model('WebSiteInfo');
+					foreach($ba as $key => $value){
+						$ba[$key] = mb_substr($value, 0, strlen($value), 'utf-8');
+					}
 					$save = array(
 						'website_id'  => $id,
 						'title'       => trim($ba['eTitle']),
@@ -91,6 +94,45 @@ class Home extends MY_Controller{
 			redirect('home/index');
 		}
 
+	}
+
+	public function info($website_id){
+		$this->load->model('WebSiteInfo');
+		$info = $this->WebSiteInfo->getBy('website_id', intval($website_id));
+		if(empty($info)){
+			show_404();
+		}	
+		$render = array(
+			'htitle' => '基本信息',
+			'info'   => $info,
+		);
+		$this->display('home/info', $render);
+	}
+
+	public function bank($website_id){
+		$this->load->model('WebSiteBank');
+		$bank = $this->WebSiteBank->getBy('website_id', intval($website_id));
+		if(empty($bank)){
+			show_404();
+		}	
+		$render = array(
+			'htitle' => '银行信息',
+			'bank'   => $bank,
+		);
+		$this->display('home/bank', $render);
+	}
+
+	public function qq($website_id){
+		$this->load->model('WebSiteQQ');
+		$qq = $this->WebSiteBank->getBy('website_id', intval($website_id));
+		if(empty($qq)){
+			show_404();
+		}	
+		$render = array(
+			'htitle' => '客服信息',
+			'qq'     => $qq,
+		);
+		$this->display('home/qq', $render);
 	}
 
 	public function url_exist($url){
