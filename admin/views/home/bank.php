@@ -14,14 +14,14 @@
 	<div class="form-group">
 		<label for="email" class="col-sm-2 control-label">开户人</label>
 		<div class="col-sm-6">
-		<input type="text" id="url" name="url" class="form-control" disabled value="<?php echo htmlspecialchars($bank['bank_user'];?>" >
+		<input type="text" id="url" name="url" class="form-control" disabled value="<?php echo htmlspecialchars($bank['bank_user']);?>" >
 		</div>
 		<div class="col-sm-4 error-wrap"></div>
 	</div>
 	<div class="form-group">
 		<label for="passwd" class="col-sm-2 control-label">银行账号</label>
 		<div class="col-sm-6">
-		<textarea class="form-control" disabled ><?php echo htmlspecialchars($bank['bank_accout']);?></textarea>
+		<input type="text" id="url" name="url" class="form-control" disabled value="<?php echo htmlspecialchars($bank['bank_account']);?>"/>
 		</div>
 		<div class="col-sm-4 error-wrap"></div>
 	</div>

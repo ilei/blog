@@ -22,16 +22,17 @@
 			</thead>
 			<tbody>
 				<?php foreach($website as $value):?>
-				<tr data-guid="{$v.guid}">
+				<tr>
 					<td><?php echo htmlspecialchars($value['name']);?></td>
-					<td><a href="<?php echo $value['url'];?>"><?php echo $value['url'];?></a></td>
+					<td><a target="_blank" href="<?php echo $value['url'];?>"><?php echo $value['url'];?></a></td>
 					<td><?php echo htmlspecialchars($value['users']);?></td>
 					<td><?php echo date('Y-m-d H:i:s', $value['updated_time']);?></td>
 					<td>
-						<a href="<?php echo 'aa';?>">基本信息</a> | 
-						<a href="<?php echo 'aa';?>">订单信息</a> | 
-						<a href="<?php echo 'aa';?>">银行管理</a> | 
-						<a href="<?php echo 'aa';?>">客服管理</a>
+						<a href="<?php echo site_url('home/info/' . $value['id']);?>">基本信息</a> | 
+						<a href="<?php echo site_url('home/info/' . $value['id']);?>">订单信息</a> | 
+						<a href="<?php echo site_url('home/bank/' . $value['id']);?>">银行管理</a> | 
+						<a href="<?php echo site_url('home/qq/' . $value['id']);?>">客服管理</a> | 
+						<a href="<?php echo site_url('home/refresh/' . $value['id']);?>">更新</a>
 					</td>
 				</tr>
 				<?php endforeach;?>

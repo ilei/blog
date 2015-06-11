@@ -14,7 +14,7 @@
 	<div class="form-group">
 		<label for="email" class="col-sm-2 control-label">客服简介</label>
 		<div class="col-sm-6">
-		<input type="text" id="url" name="url" class="form-control" disabled value="<?php echo htmlspecialchars($qq['desc'];?>" >
+		<input type="text" id="url" name="url" class="form-control" disabled value="<?php echo htmlspecialchars($qq['desc']);?>" >
 		</div>
 		<div class="col-sm-4 error-wrap"></div>
 	</div>
