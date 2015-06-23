@@ -103,5 +103,16 @@ class MY_Model extends CI_Model {
         return $this->db->delete($this->table, array($name => $value));
     }
 
+    public function save($data, $id = 0){
+        $data['updated_time'] = time();
+        if(!$id){
+            $data['created_time'] = time(); 
+            return $this->add($data);
+        }else{
+            return $this->update($id, $data);
+        }
+    }
+
+
 }
 

@@ -5,6 +5,8 @@ class Article extends MY_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('MArticle');
+        $this->load->library('Breadcrumb');
+        $this->breadcrumb->append_crumb('博客', site_url());
     }
 
     public function index(){
@@ -16,7 +18,7 @@ class Article extends MY_Controller{
         $data = $condition = array();
         $condition[] = array('status' => 1);
         if(intval($cate_id)){
-            $condition['cate_id'] = intval($cate_id);
+            $condition[]['cate_id'] = intval($cate_id);
         }
         $list = $this->MArticle->query($condition, intval($offset) , 10, array('updated_time' => 'desc'));
         $data['list'] = $list ? $list : array();
@@ -32,6 +34,8 @@ class Article extends MY_Controller{
         if(!$article){
             show_404();
         }
+        $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $article[0]['cate_id']));
+        $this->breadcrumb->append_crumb($article[0]['name'], '###');
         $data = array();
         $data['article']       = $article[0];
         $this->meta_keywords[] = $article[0]['keywords'];

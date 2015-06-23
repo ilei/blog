@@ -12,14 +12,14 @@
   <!--栏目分类-->
   <div class="lanmubox">
     <div class="hd">
-      <ul><li>文章分类</li><li>最新文章</li></ul>
+      <ul><li>文章分类</li></ul>
     </div>
     <div class="bd">
-      <?php if(isset($cates) && $cates):?>
+      <?php if(isset($cate_right) && $cate_right):?>
       <ul class="tag_box">
-        <?php foreach($cates as $key => $cate):?>
-        <li><a href="/article/category/" . <?php echo $cate['id'];?>>
-          <?php echo urlencode($cate['name']);?> <span><?php echo $cate['nums'];?></span>
+        <?php foreach($cate_right as $key => $cate):?>
+        <li><a href="<?php echo site_url('article/list/' . $cate['id']);?>">
+          <?php echo $cate['name'];?> <span><?php echo rand(50, 100);?></span>
         </a></li>
         <?php endforeach;?>
       </ul>
