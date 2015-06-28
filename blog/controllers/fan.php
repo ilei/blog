@@ -5,9 +5,11 @@ class Fan extends MY_Controller{
     public function __construct(){
         parent::__construct();
         $this->load->model('MArticle');
+        $this->load->library('Breadcrumb');
     }
 
     public function index(){
+        $this->getRight();
         $this->lists();
     }
 

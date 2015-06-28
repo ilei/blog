@@ -12,15 +12,27 @@ class MY_Controller extends CI_Controller{
 
     public function display($page, $data = array(), $template = 'page'){
         $this->load->vars($data);
+        list($cate_right, $news_right) = $this->getRight();
         $this->load->vars(array(
             'page'              => $page,
             'title'             => $this->title,
             'meta_keywords'     => $this->meta_keywords,
             'meta_desc'         => $this->meta_desc,
             'modules'           => $this->module,
+            'cate_right'        => $cate_right,
+            'news_right'        => $news_right,
             'last_release'      => C('release.last_release'),
         ));
         $this->load->view('public/' . $template);
+    }
+
+    public function getRight(){
+        $this->load->model('MCategory');
+        $cate = $this->MCategory->query();
+        $this->load->model('MArticle');
+        $news = $this->MArticle->query(array(), 0, count($cate), array('updated_time' => 'desc'));
+        return array($cate, $news);
+    
     }
 
     public function loadHtml($page, $data = array()){

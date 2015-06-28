@@ -1,6 +1,7 @@
 <!--left-->
 <div class="left" id="news">
   <div class="weizi">
+    <?php echo $this->breadcrumb->output();?>
     <!--  <div class="wz_text">当前位置：<a href="#">首页</a>><a href="#">学无止境</a>><span>文章内容</span></div>-->
   </div>
   <div class="news_content">

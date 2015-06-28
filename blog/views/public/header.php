@@ -11,11 +11,18 @@
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <link rel="stylesheet" href="/static/blog/css/style.css?v=<?php echo $last_release;?>">
     <link rel="stylesheet" href="/static/blog/css/index.css?v=<?php echo $last_release;?>">
+    <link rel="stylesheet" href="/static/blog/css/shCoreDefault.css?v=<?php echo $last_release;?>">
     <script type="text/javascript" src="/static/blog/js/jquery1.42.min.js"></script>
     <script type="text/javascript" src="/static/blog/js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="/static/blog/js/shCore.js"></script>
     <!--[if lt IE 9]>
     <script src="js/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+         $(function(){
+             SyntaxHighlighter.highlight();
+         });
+    </script>
 </head>
 <body>
     <!--header start-->
@@ -28,7 +35,7 @@
      <div id="nav">
         <ul>
          <li><a href="<?php echo site_url();?>">首页</a></li>
-         <li><a href="<?php echo site_url();?>">博客</a></li>
+         <li><a target="_blank" href="<?php echo site_url('out');?>">外包</a></li>
         <!-- <li><a href="about.html">关于我</a></li>
          <li><a href="shuo.html">碎言碎语</a></li>
          <li><a href="riji.html">个人日记</a></li>

@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Codeus';
+	src:url("../images/Codeus.eot")/*tpa=http://www.waibao6.com/Templates/cn/slider/images/Codeus.eot*/;
+	src:url("../images/Codeus-2.eot")/*tpa=http://www.waibao6.com/Templates/cn/slider/images/Codeus-2.eot*/ format('embedded-opentype'),
+		url("../images/Codeus.ttf")/*tpa=http://www.waibao6.com/Templates/cn/slider/images/Codeus.ttf*/ format('truetype'),
+		url("../images/Codeus.woff")/*tpa=http://www.waibao6.com/Templates/cn/slider/images/Codeus.woff*/ format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
