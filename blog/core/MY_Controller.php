@@ -25,6 +25,19 @@ class MY_Controller extends CI_Controller{
         ));
         $this->load->view('public/' . $template);
     }
+    
+    public function show($page, $data = array(), $template = 'page'){
+        $this->load->vars($data);
+        $this->load->vars(array(
+            'page'              => $page,
+            'title'             => $this->title,
+            'meta_keywords'     => $this->meta_keywords,
+            'meta_desc'         => $this->meta_desc,
+            'modules'           => $this->module,
+            'last_release'      => C('release.last_release'),
+        ));
+        $this->load->view('qq/' . $template);
+    }
 
     public function getRight(){
         $this->load->model('MCategory');

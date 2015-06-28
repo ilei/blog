@@ -1,0 +1,138 @@
+@charset "utf-8";
+/* CSS Document */
+body { background: none repeat scroll 0 0 #EAEAEA;font-size: 12px;}
+a{ color: #676767; text-decoration: none; }
+
+.m_softleft {width: 300px;}
+.m_softright {width: 660px;}
+
+h3.f_h3list {line-height: 34px;}
+.f_h3list {background: url(../images/rexbg.gif) repeat-x scroll 0 0 transparent; border-bottom: 1px solid #DDDDDD; height: 34px; padding-left: 10px; font-size:14px;}
+.more{ display:block; width:76px; height:21px; position:absolute; top:7px; right:11px;}
+.button{ display:block; background:url(../images/anniu.png) no-repeat 0 0; width:53px; height:21px; position:absolute; top:7px; right:11px;}
+a.button:hover{ display:block; background:url(../images/anniu2.png) no-repeat 0 0; width:53px; height:21px; position:absolute; top:7px; right:11px;}
+
+.m_nav, .m_nav li div a:hover, #backTop:hover, .m_xzk_p a:hover, .m_softleft1 ul li a.red { background-color: #78BA00;}
+
+.m_softleft1,.m_softright1,.m_softright2{ position:relative;}
+.m_softleft1{ height:281px; overflow:hidden;}
+.m_softleft1 ul li { border-bottom: 1px solid #EEEEEE; height: 40px; line-height: 39px; overflow: hidden;}
+.m_softleft1 ul li img { height: 30px; margin: 5px 8px 0 10px; width: 30px;}
+
+
+.m_softleft2 ul li { border-bottom: 1px solid #EEEEEE; height: 28px;font-size:12px;}
+.m_softleft2 ul li span { background: none repeat scroll 0 0 #C0C0C0; color: #FFFFFF; font-family: Tahoma; font-size: 12px; font-weight: bold; height: 18px; line-height: 18px; margin: 5px 8px 0 6px; text-align: center; width: 18px;}
+.m_softleft2 ul li.f-t3 span{ background: none repeat scroll 0 0 #78BA00; color:#fff;}
+.m_softleft2 ul li span, .m_softleft2 ul li p { display: inline; float: left;}
+.m_softleft2 ul li p { height: 28px; line-height: 28px; overflow: hidden; width: 260px;}
+
+.m_softleft3 ul li{ border-bottom: 1px solid #EEEEEE; height: 28px; line-height:28px; font-size:12px;}
+.m_softleft3 ul li a{  background: url(../images/icon.png) no-repeat scroll 6px 0 transparent; padding: 0 0 0 29px;}
+
+.m_softright1 ul li{ border-bottom: 1px solid #EEEEEE; height: 40px; line-height:40px; *height: 36px; *line-height:36px; font-size:12px;}
+.m_softright1 ul li a{ padding:0 0 0 29px; background:url(../images/icon.png) no-repeat 9px 0; }
+.m_softright1 ul li span.time{ display:block; float:right; background:url(../images/timeicon.png) no-repeat 0 10px; padding:0 0 0 28px; margin:0 12px 0 0; color:#a4a2a2; display:inline;}
+
+.jxlist {height: 201px; margin:18px auto 0; width: 634px; overflow:hidden;}
+.jxlist dt a{ position:relative;}
+.jxlist dt img{ border:1px solid #cccccc; padding:2px;}
+.jxlist dt span{ display:block; position:absolute; height:35px; line-height:35px; background:rgba(0, 0, 0, 0.4) none repeat scroll 0 0 !important; filter:Alpha(opacity=40); background:#000000; color:#fff; top:-25px; left:3px; *top:154px; width:175px; text-align:center; font-size:14px;}
+.jxlist dd{ width:438px;}
+.jxlist dd ul li{ border-bottom: 1px solid #EEEEEE; height:14px; line-height:14px; float:left; font-size:14px; padding:9px 0;}
+.jxlist dd ul li span{ color:#A4A2A2;}
+.jxlist dd ul li a{width:350px; height:14px; line-height:14px; float:left; font-size:12px; font-weight:normal; overflow:hidden}
+.m_softleft1 ul li a.bg:link,.m_softleft1 ul li a.bg:hover{ background:none;}
+
+
+#show{width:244px; height:194px; margin:13px auto 8px; overflow:hidden;}
+#kinMaxShow{width:600px; height:168px; visibility:hidden; overflow:hidden;}
+#kinMaxShow p.title{ position:absolute; left:0; bottom:0; text-indent:10px; line-height:30px;font-family:Verdana; color:#FFF; display:block;width:100%; height:30px; font-family:14px;filter:progid:DXImageTransform.Microsoft.gradient(startcolorstr=#aa000000,endcolorstr=#aa000000);background:rgba(0,0,0,0.5); font-size:14px; font-weight:bold;}
+
+.sign {display:none;}
+.active.sign {display:block;}
+
+#show_flash{ height:195px; width:244px; margin:14px auto 10px; overflow:hidden;}
+#slide { height: 100%; width:244px; position: relative;}
+.slide_field { height: 100%; position: relative;}
+.slide_field li { height: 100%; left: 0; overflow: hidden; position: absolute; top: 0;}
+.slide_nav .cur { background-position: 0 -18px; color: #FF0000; font-weight: bold; text-decoration: underline;}
+.slide_nav { bottom: 4px; position: absolute; right: 4px; z-index: 9999;}
+.slide_field .s1 { z-index: 3;}
+.slide_field .cur { z-index: 9;}
+.slide_field b { background: url("../images/hh_slide_bar.png") repeat scroll 0 0 transparent; bottom: 0; color: #FFFFFF; cursor: pointer; font-size: 14px; font-weight: normal; height: 26px; left: 0;    line-height: 26px;    overflow: hidden;    padding: 0 110px 0 10px;    position: absolute;    width: 380px;}
+.slide_field a:hover b {color: #FF0000;text-decoration: none;}
+#slide ul li{ height:195px;}
+#slide ul.slide_nav li{ background: none repeat scroll 0 0 #FFFFFF;border: 1px solid #FFFFFF;color: #217DC5;cursor: pointer;float: left;font-family: Verdana;font-size: 12px;height: 18px;line-height: 18px;margin-right: 6px;opacity: 0.8;text-align: center;width: 18px;text-decoration:none;}
+#slide ul.slide_nav li.cur{ background: none repeat scroll 0 0 #FFAA25; border: 1px solid #FFAA25; color: #FFFFFF; cursor: default;} 
+#slide ul li a{ padding:0px;}
+
+
+
+.c_like {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CACACA;
+    float: right;
+    height: auto;
+    width: 298px;
+	margin:0 0 10px;
+}
+
+.c_like .tit {
+       background: url("../images/rexbg.gif") repeat-x scroll 0 0 transparent;
+    border-bottom: 1px solid #DDDDDD;
+    font-size: 14px;
+    height: 34px;
+    padding-left: 10px;
+	line-height: 34px;
+}
+.c_like ul {
+    display: block;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    padding-bottom: 14px;
+    width: 271px;
+}
+.c_like .tit dt {
+    color: #000000;
+    display: inline;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 0 6px;
+}
+.c_like .tit dd {
+    background: url(../images/anniu.png) no-repeat scroll 0 0 transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+    height: 22px;
+    line-height: 16px;
+    margin: 7px 11px 0 0;
+    text-align: center;
+    width: 56px;
+}
+.c_like ul li {font-size:12px;
+    display: block;
+    height: 46px;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: 271px;
+	border-bottom:1px solid #EEEEEE;
+}
+.c_like ul li a {
+    background: url(../images/like_bg.jpg) no-repeat scroll 0 0 transparent;
+    float: right;
+    height: 34px;
+    line-height: 36px;
+    margin-top: 4px;
+    overflow: hidden;
+    padding-left: 13px;
+    width: 220px;
+	display:block;
+}
+.c_like ul li img { height: 30px; margin: 5px 8px 0 0; width: 30px;}
+.f_div{ clear:both;}
