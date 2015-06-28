@@ -7,6 +7,12 @@ class Site extends MY_Controller{
         parent::__construct();
     }
 	public function index(){
+		$this->load->library('FileEncrypt');
+		$a = '15122362280';
+		$b = $this->fileencrypt->encrypt($a, '!@#$%#');
+		$c = $this->fileencrypt->decrypt($b, '!@#$%#');
+		var_dump($b, $c);die;
+
 		$render = array(
 			'htitle' => '网站列表',	
 		);

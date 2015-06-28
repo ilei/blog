@@ -22,7 +22,7 @@
 			<div class="topHeader">
 				<div id="header">
 					<div id="logo">
-						<a href="index.htm"><img src="/static/home/images/logo.jpg"  width="220" height="62" /></a>
+						<a href="index.htm"><img src="/static/home/images/logo.png"  width="220" height="62" /></a>
 					</div>
 					<div class="top_nav" id="menuNav">
 						<a href="#Home" class="on">首页<div class="navBg" style="display: block;" id="navBgOn"></div></a>
