@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title><?php echo implode('-', array_reverse($title));?></title>
-    <meta name="keywords" content="<?php echo implode(',', $meta_keywords);?>">
-    <meta name="description" content="<?php echo $meta_desc;?>">
+    <meta name="keywords" content="<?php echo implode(',', array_reverse($meta_keywords));?>">
+    <meta name="description" content="<?php echo implode(',', array_reverse($meta_desc));?>">
     <meta name="author" content="ilei">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
     <link rel="shortcut icon" type="image/png" href="/favicon.ico">
     <link rel="stylesheet" href="/static/qq/css/topic.css?v=<?php echo $last_release;?>">
     <link rel="stylesheet" href="/static/qq/css/reset.css?v=<?php echo $last_release;?>">
     <link rel="stylesheet" href="/static/qq/css/skin.css?v=<?php echo $last_release;?>">
-    <script type="text/javascript" src="/static/qq/js/jquery1.7.2.min.js"></script>
+    <?php if(isset($css) && $css):?>
+    <?php foreach($css as $key => $v):?>
+        <link rel="stylesheet" href="/static/qq/css/<?php echo $v?>.css?v=<?php echo $last_release;?>">
+    <?php endforeach;?>
+    <?php endif;?>
+    <script type="text/javascript" src="/static/qq/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="/static/qq/js/redirect.js"></script>
     <script type="text/javascript" src="/static/qq/js/base.js"></script>
     <script type="text/javascript" src="/static/qq/js/function.js"></script>
@@ -38,9 +43,11 @@
             <a href="<?php echo site_url('qq');?>" title="全部签名">全部签名</a>
             <span class="wzaa">
                 <?php foreach($cates as $key => $cate):?>
-                <a title="qq<?php echo $cate['cate_name'];?>" href="<?php echo site_url('qq/' . $cate['cate_mark']);?>"><?php echo $cate['cate_name'];?></a>
+                <?php if($cate['id'] == 101){continue;}?>
+                <a title="QQ<?php echo $cate['cate_name'];?>" href="<?php echo site_url('qq/' . $cate['cate_mark']);?>"><?php echo str_replace('个性', '', $cate['cate_name']);?></a>
                 <!--<a title="伤感签名" href="/qm/shangganqm_1.html"><font color="#FF0000">伤感签名</font></a>-->
                 <?php endforeach;?>
+                <a title="QQ<?php echo '人生格言个性签名';?>" href="<?php echo site_url('qq/renshenggeyan');?>"><?php echo '人生格言';?></a>
             </span>
         </div> 
     </div>

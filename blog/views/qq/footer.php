@@ -1,12 +1,12 @@
 <div class="g_foot">
     <p>  
-        <a href="http://www.qqtn.com/app/about.html">关于腾牛</a> | 
-        <a href="http://www.qqtn.com/app/contact.html">联系方式</a> | 
-        <a href="http://www.qqtn.com/app/history.html">发展历程</a> | 
-        <a href="http://www.qqtn.com/app/help.html" style="cursor:help;">下载帮助(？)</a> | 
-        <a href="http://www.qqtn.com/app/adv.html">广告联系</a> | 
-        <a href="http://www.qqtn.com/app/map.html">网站地图</a> | 
-        <a href="http://www.qqtn.com/app/link.html">友情链接</a> |   
+        <a href="<?php echo site_url('qq');?>">关于QQ个性签名</a> | 
+        <a href="<?php echo site_url();?>">联系方式</a> | 
+        <a href="<?php echo site_url('qq');?>">发展历程</a> | 
+        <a href="<?php echo site_url('qq');?>" style="cursor:help;">下载帮助(？)</a> | 
+        <a href="<?php echo site_url('qq');?>">广告联系</a> | 
+        <a href="<?php echo site_url('qq');?>">网站地图</a> | 
+        <a href="<?php echo site_url('qq');?>">友情链接</a> |   
     </p>
     <p> Copyright  2012 smartlei.com <b>〖smartlei〗</b> 版权所有</p>   
     <p >声明: 所有与qq相关的信息均来自互联网  如有异议 请与本站联系 本站为非赢利性网站 不接受任何赞助和广告</p>

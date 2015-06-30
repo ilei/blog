@@ -10,9 +10,9 @@
         <?php endif;?>
             <li>
                 <img class="f_fl" src="/static/qq/images/tx-<?php echo $key + 1;?>.jpg" width="30" height="30">
-                <a class="bg" href="###"><?php echo $value['sign_title']?></a>
+                <a class="bg" href="###" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 17 ? mb_substr($value['sign_title'], 0, 16) . '...' : $value['sign_title'];?></a>
             </li>
-        <?php if($key+1 % 6 == 0):?>
+        <?php if(($key+1) % 6 == 0):?>
         </ul>
         <?php endif;?>
         <?php endforeach;?>
@@ -45,7 +45,7 @@
          </div>
          <ul>
             <?php foreach($push as $key => $value):?>
-            <li><a href="###"><?php echo $value['sign_title'];?></a></li>
+                <li><a href="###" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 17 ? mb_substr($value['sign_title'], 0, 16) . '...' : $value['sign_title'];?></a></li>
             <?php endforeach;?>
          </ul>
     </div>
@@ -55,7 +55,7 @@
         <?php foreach($ranks as $key => $value):?>
          <li>
             <span><?php echo $key + 1;?></span>
-            <p><a href="###"><?php echo $value['sign_title'];?></a></p>
+                <p><a href="###" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 25 ? mb_substr($value['sign_title'], 0, 22) . '...' : $value['sign_title'];?></a></p>
         </li>
         <?php endforeach;?>
       </ul>

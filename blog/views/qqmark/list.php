@@ -4,14 +4,16 @@
             <img src="/static/qq/images/tit_bg.jpg" class="t_bg" /> 
         </p>
         <ul class="list_con">
-            <?php foreach($list as $key => $vlaue):?>
+            <?php foreach($list as $key => $value):?>
+            <?php if($value['sign_title']):?>
             <li> 
                 <strong> 
                     <span>[<?php echo $cate_name;?>]</span>
-                    <a href="###" target="_blank"><?php echo $value['sign_title'];?></a> 
+                    <a title="<?php echo $value['sign_title'];?>" href="###" target="_blank"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 32 ? mb_substr($value['sign_title'], 0, 31) . '...' : $value['sign_title'];?></a> 
                 </strong> 
                 <em><span class="qmdianji"><?php echo 10000+rand(100, 5000);?></span> <font color=red><?php echo date('Y-m-d', $value['updated_time']);?></font> </em> 
             </li>
+            <?php endif;?>
             <?php endforeach;?>
         </ul>
         <div class="tspage">
@@ -24,19 +26,17 @@
                 .tsp_count i { color:#f00;}
                 .tspage b {color:#f00;}
             </style>
-            <div class="tsp_count">共:<i>3206</i>条 页次:<b>1</b>/107 每页:<i>30</i> </div>
             <div class="tsp_nav">
-                <i>首页</i> <i>上一页</i> <b> 1 </b>  <a href=/qm/gexingqm_2.html>2</a>   <a href=/qm/gexingqm_3.html>3</a>   <a href=/qm/gexingqm_4.html>4</a>   <a href=/qm/gexingqm_5.html>5</a>  <a href="/qm/gexingqm_6.html" class="tsp_more"><i>更多</i></a> <a href="/qm/gexingqm_2.html" class="tsp_next"><i>下一页</i> </a> <a href="/qm/gexingqm_107.html" class="tsp_end"><i>尾页</i> </a> 
+                <!--<i>首页</i> <i>上一页</i> <b> 1 </b>  <a href=/qm/gexingqm_2.html>2</a>   <a href=/qm/gexingqm_3.html>3</a>   <a href=/qm/gexingqm_4.html>4</a>   <a href=/qm/gexingqm_5.html>5</a>  <a href="/qm/gexingqm_6.html" class="tsp_more"><i>更多</i></a> <a href="/qm/gexingqm_2.html" class="tsp_next"><i>下一页</i> </a> <a href="/qm/gexingqm_107.html" class="tsp_end"><i>尾页</i> </a>-->
             </div>
         </div> 
     </div>
     <dt class="f_fr m_txright1">
-
         <div class="m_divbai m_hotbq f_mb10">
             <h5 class="m_txh5"><span class="f_fl">热门标签</span></h5>
             <p>
                 <span class="wzaa">
-                <a title="失望" href="###">失望</a>
+                <!--<a title="失望" href="###">失望</a>-->
                 </span>
             </p>
         </div>

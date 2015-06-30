@@ -23,8 +23,8 @@ class Memcached {
             $conf = $CI->config->config['memcached'];
             $this->_host = $conf['host'];
             $this->_port = $conf['port'];
-            $this->_memcached = new Memcache();
-            $this->_memcached->pconnect($conf['host'], $conf['port']) or die ("Could not connect to mc");
+            $this->_memcached = new Memcache;
+            $this->_memcached->connect($conf['host'], $conf['port']) or die ("Could not connect to mc");
         }
         return TRUE;
     }

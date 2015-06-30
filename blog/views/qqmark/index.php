@@ -10,7 +10,7 @@
         <?php foreach($new as $key => $value):?>
         <li>
             <span class="time"><font color=red><?php echo date('m-d', $value['updated_time']);?></font></span>
-            <a href="###"><?php echo $value['sign_title'];?></a>
+            <a href="###" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 50 ? mb_substr($value['sign_title'], 0, 49) . '...' : $value['sign_title'];?></a>
         </li>
         <?php endforeach;?>
       </ul>
@@ -28,7 +28,7 @@
             <ul>              
               <?php foreach($shanggan as $key => $value):?>
               <li>
-                <a class="f_fl" href="###"><?php echo $value['sign_title'];?></a>
+                <a href="###" class="f_fl" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 28 ? mb_substr($value['sign_title'], 0, 27) . '...' : $value['sign_title'];?></a>
                 <span class="f_fr"><?php echo date('Y-m-d', $value['updated_time']);?></span>
               </li>
               <?php endforeach;?>
@@ -37,7 +37,7 @@
        </dl>
       <dl class="jxlist">
         <dt class="f_fl">
-            <a href="<?php echo site_url('qq/shanggan');?>">
+            <a href="<?php echo site_url('qq/gaoxiao');?>">
                 <img src="/static/qq/images/201422493448.png" width="175" height="186"><span>搞笑签名</span>
             </a>
         </dt>
@@ -45,7 +45,7 @@
             <ul>              
               <?php foreach($gaoxiao as $key => $value):?>
               <li>
-                <a class="f_fl" href="###"><?php echo $value['sign_title'];?></a>
+                <a href="###" class="f_fl" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 28 ? mb_substr($value['sign_title'], 0, 27) . '...' : $value['sign_title'];?></a>
                 <span class="f_fr"><?php echo date('Y-m-d', $value['updated_time']);?></span>
               </li>
               <?php endforeach;?>
@@ -62,7 +62,7 @@
             <ul>              
               <?php foreach($weimei as $key => $value):?>
               <li>
-                <a class="f_fl" href="###"><?php echo $value['sign_title'];?></a>
+                <a href="###" class="f_fl" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 28 ? mb_substr($value['sign_title'], 0, 27) . '...' : $value['sign_title'];?></a>
                 <span class="f_fr"><?php echo date('Y-m-d', $value['updated_time']);?></span>
               </li>
               <?php endforeach;?>
@@ -71,15 +71,15 @@
        </dl>
       <dl class="jxlist">
         <dt class="f_fl">
-            <a href="<?php echo site_url('qq/qinglv');?>">
+            <a href="<?php echo site_url('qq/aiqing');?>">
                 <img src="/static/qq/images/20142249359.png" width="175" height="186"><span>情侣签名</span>
             </a>
         </dt>
          <dd class="f_fr">
             <ul>              
-              <?php foreach($qinglv as $key => $value):?>
+              <?php foreach($aiqing as $key => $value):?>
               <li>
-                <a class="f_fl" href="###"><?php echo $value['sign_title'];?></a>
+                <a href="###" class="f_fl" title="<?php echo $value['sign_title'];?>"><?php echo mb_strlen($value['sign_title'], 'utf8') >= 28 ? mb_substr($value['sign_title'], 0, 27) . '...' : $value['sign_title'];?></a>
                 <span class="f_fr"><?php echo date('Y-m-d', $value['updated_time']);?></span>
               </li>
               <?php endforeach;?>
