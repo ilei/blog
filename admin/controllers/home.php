@@ -3,6 +3,7 @@
 class Home extends MY_Controller{
 
 	public function __construct(){
+        echo 'admin';die;
 		parent::__construct();
 		$this->load->model('WebSite');
 	}

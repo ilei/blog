@@ -35,7 +35,8 @@
      <div id="nav">
         <ul>
          <li><a href="<?php echo site_url();?>">首页</a></li>
-         <li><a target="_blank" href="<?php echo site_url('out');?>">外包</a></li>
+         <li><a target="_blank" href="<?php echo 'http://waibao.smartlei.com';?>">外包</a></li>
+         <li><a target="_blank" href="<?php echo 'http://qianming.smartlei.com';?>">QQ个性签名</a></li>
         <!-- <li><a href="about.html">关于我</a></li>
          <li><a href="shuo.html">碎言碎语</a></li>
          <li><a href="riji.html">个人日记</a></li>

@@ -30,7 +30,12 @@ class Article extends MY_Controller{
         if(!intval($aid)){
             show_404();
         }
-        $article = $this->MArticle->get(intval($aid));
+        $key = 'article::view::id_' . $aid;
+        $this->load->library('memcached');
+        if(!($article = $this->memcached->get($key))){
+            $article = $this->MArticle->get(intval($aid));
+            $this->memcached->set($key, $article, 30*24*3600);
+        }
         if(!$article){
             show_404();
         }

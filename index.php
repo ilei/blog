@@ -1,5 +1,4 @@
 <?php
-
 /*
  *---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
@@ -18,7 +17,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-	define('ENVIRONMENT', 'development');
+	define('ENVIRONMENT', 'production');
 /*
  *---------------------------------------------------------------
  * ERROR REPORTING
@@ -73,6 +72,14 @@ if (defined('ENVIRONMENT'))
  *
  */
 	$application_folder = 'blog';
+    $host = $_SERVER['HTTP_HOST'];
+    if($host){
+        $arr = array('blog', 'qianming', 'waibao', 'admin');
+        $application_folder  = strtolower(current(explode('.', $host)));
+        if(!in_array($application_folder, $arr)){
+	        $application_folder = 'blog';
+        }
+    }
 
 /*
  * --------------------------------------------------------------------

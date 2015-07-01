@@ -528,7 +528,7 @@ function sendXQ(){
 
 	$('#sendBtn').hide();
 	$('#sendInfo').html('正在发送, 请稍候...');
-	$.ajax({url: "/out/ajax/",data: 'json', type: "post",data:{name:name,tel:tel,mail:mail,com:com,con:con},
+	$.ajax({url: "/ajax/",data: 'json', type: "post",data:{name:name,tel:tel,mail:mail,com:com,con:con},
 		error:function(){alert("theresan error with AJAX");$('#sendBtn').attr('class', 'submitBt');},
 		success:function(data){
 				if(data.success) {
