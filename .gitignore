@@ -1,4 +1,3 @@
-blog/config/*
-admin/config/*
+*/config/*
 baidu*
 *.sql
