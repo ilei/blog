@@ -82,15 +82,6 @@ $(".tit dd").click(function(){
     $(".c_like ul").eq(stra-1).show();
 });
 </script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-    var hm = document.createElement("script");
-    hm.src = "//hm.baidu.com/hm.js?24654c65d206446adddb862872dd0621";
-    var s = document.getElementsByTagName("script")[0]; 
-    s.parentNode.insertBefore(hm, s);
-})();
-</script>
 
 </body>
 </html>

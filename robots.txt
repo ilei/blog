@@ -1,0 +1,12 @@
+# robots.txt generated at http://tool.chinaz.com/robots/ 
+User-agent: *
+Disallow: 
+Crawl-delay: 10
+Disallow: /admin/
+Disallow: /cli/
+Disallow: /istratoradmin/
+Sitemap: http://www.smartlei.com/sitemap.xml
+Sitemap: http://www.smartlei.com/sitemap.html
+Sitemap: http://qianming.smartlei.com/qianming_sitemap.html
+Sitemap: http://qianming.smartlei.com/qianming_sitemap.xml
+

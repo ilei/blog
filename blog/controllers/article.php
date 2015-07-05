@@ -20,7 +20,7 @@ class Article extends MY_Controller{
         if(intval($cate_id)){
             $condition[]['cate_id'] = intval($cate_id);
         }
-        $list = $this->MArticle->query($condition, intval($offset) , 10, array('updated_time' => 'desc'));
+        $list = $this->MArticle->query($condition, intval($offset) , 20, array('updated_time' => 'desc'));
         $data['list'] = $list ? $list : array();
         $this->display('front/article/index', $data);
     }

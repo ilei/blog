@@ -26,6 +26,15 @@
         window.onerror=function(){return true;}
     });
 </script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a91043b5616a5a1f92b614e90c6be326";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
 </head>
 <body>
     <div class=" g_nav_n m_nav f_mb10">
