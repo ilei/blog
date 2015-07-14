@@ -89,7 +89,6 @@ class Crawl {
 		$qq = '/bgcolor=\"#FFFFFF\">([^\"]*?)<\/td>/i';	
 		preg_match_all($qq, $qq_info, $matches);
 		return $matches[1];
-	
 	}
 
 }
