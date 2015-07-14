@@ -56,7 +56,7 @@ class Home extends MY_Controller{
             $this->memcached->set($total, $num, 7*24*3600);
         }
         $assign['list'] = $sign;
-		$assign['pager'] = ci_pager(site_url($mark), $num, 20, 3, '', site_url($mark));
+		$assign['pager'] = ci_pager(site_url('list/' . $mark), $num, 20, 3, '', site_url('list/' . $mark));
         $assign['cate_name'] = $cate[0]['cate_name'];
         $this->show('home/list', $assign);
     }
