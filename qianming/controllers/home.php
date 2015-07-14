@@ -47,8 +47,9 @@ class Home extends MY_Controller{
         $this->qq_meta_keywords[] = "{$cate[0]['cate_name']},{$cate[0]['cate_name']}大全,最新{$cate[0]['cate_name']}";
         $this->qq_meta_desc[] = "2015最新最全{$cate[0]['cate_name']}";
         $this->css[] = 'style';
-        $key = 'qqmark::cate::' . $cate[0]['cate_mark'];
+        $key = 'qqmark::cate::' . $cate[0]['cate_mark'] . '::' . $offset;
 		$total = 'qqmark::cate::' . $cate[0]['cate_mark'] . '::total';
+
         if(!($sign = $this->memcached->get($key)) || !($num = $this->memcached->get($total))){
 			$num  = $this->QQSign->count(array(array('status' => 1, 'cate_id' => $cate_id)));
             $sign = $this->QQSign->query(array(array('status' => 1, 'cate_id' => $cate_id)), intval($offset), 20, array('updated_time' => 'desc'));

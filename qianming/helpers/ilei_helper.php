@@ -235,13 +235,15 @@ if ( ! function_exists('array_column')){
 }
 
 if ( ! function_exists('ci_pager')){
-    function ci_pager($url, $total, $page_size = 20, $uri_segment = 3, $suffix = '', $first_url = '', $anchor_class = 'item', $display_pages = TRUE, $rel = FALSE) {
+    function ci_pager($url, $total, $page_size = 20, $uri_segment = 3, $suffix = '', $first_url = '', $anchor_class = '', $display_pages = TRUE, $rel = FALSE) {
         $_CI =& get_instance();
         $_CI->load->library('pagination');
         if($total / $page_size > 40){
             $total = $page_size * 40;
         }
-        $attr = 'class="'.$anchor_class.'" ';
+        if($anchor_class){
+            $attr = 'class="'.$anchor_class.'" ';
+        }
         if($rel){
             $attr .= ' rel="nofollow" ';
         }
@@ -253,8 +255,8 @@ if ( ! function_exists('ci_pager')){
         $config['display_pages']   = $display_pages; 
         $config['anchor_class']    = $attr;
         $config['first_link']      = '首页';
-        $config['first_tag_open']  = '';
-        $config['first_tag_close'] = '';
+        $config['first_tag_open']  = '<i>';
+        $config['first_tag_close'] = '</i>';
         $config['last_link']       = '尾页';
         $config['last_tag_open']   = '';
         $config['last_tag_close']  = '';
@@ -262,10 +264,10 @@ if ( ! function_exists('ci_pager')){
         $config['next_tag_open']   = '';
         $config['next_tag_close']  = '';
         $config['prev_link']       = '上一页';
-        $config['prev_tag_open']   = '';
-        $config['prev_tag_close']  = '';
-        $config['cur_tag_open']    = '<span class="current">';
-        $config['cur_tag_close']   = '</span>';
+        $config['prev_tag_open']   = '<i>';
+        $config['prev_tag_close']  = '</i>';
+        $config['cur_tag_open']    = '<b>';
+        $config['cur_tag_close']   = '</b>';
         $config['num_tag_open']    = '';
         $config['num_tag_close']   = '';
         $config['full_tag_open']   = '';
