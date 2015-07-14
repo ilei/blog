@@ -27,6 +27,7 @@
                 .tspage b {color:#f00;}
             </style>
             <div class="tsp_nav">
+				<?php echo $pager;?>
                 <!--<i>首页</i> <i>上一页</i> <b> 1 </b>  <a href=/qm/gexingqm_2.html>2</a>   <a href=/qm/gexingqm_3.html>3</a>   <a href=/qm/gexingqm_4.html>4</a>   <a href=/qm/gexingqm_5.html>5</a>  <a href="/qm/gexingqm_6.html" class="tsp_more"><i>更多</i></a> <a href="/qm/gexingqm_2.html" class="tsp_next"><i>下一页</i> </a> <a href="/qm/gexingqm_107.html" class="tsp_end"><i>尾页</i> </a>-->
             </div>
         </div> 
