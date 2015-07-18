@@ -28,7 +28,7 @@ class Home extends MY_Controller{
             $assign['news'] = $new; 
             $assign['push'] = $new; 
             $assign['ranks'] = $new; 
-            $this->memcached->set('qqmark::index', $assign, 7*24*3600);
+            $this->memcached->set('qqmark::index', $assign, 24*3600);
         }
         $this->show('home/index', $assign);
     }
@@ -53,8 +53,8 @@ class Home extends MY_Controller{
         if(!($sign = $this->memcached->get($key)) || !($num = $this->memcached->get($total))){
 			$num  = $this->QQSign->count(array(array('status' => 1, 'cate_id' => $cate_id)));
             $sign = $this->QQSign->query(array(array('status' => 1, 'cate_id' => $cate_id)), intval($offset), 20, array('updated_time' => 'desc'));
-            $this->memcached->set($key, $sign, 7*24*3600);
-            $this->memcached->set($total, $num, 7*24*3600);
+            $this->memcached->set($key, $sign, 24*3600);
+            $this->memcached->set($total, $num, 24*3600);
         }
         $assign['list'] = $sign;
 		$assign['pager'] = ci_pager(site_url('list/' . $mark), $num, 20, 3, '', site_url('list/' . $mark));
