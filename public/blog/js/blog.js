@@ -9,7 +9,7 @@ require.config({
              'shcore':['jquery'],
             }
   });
-require(['jquery', 'js', 'silder', 'shcore], function ($){
+require(['jquery', 'js', 'silder', 'shcore'], function ($){
     var dataModule = $('body').delegate('a[href^="#"]', 'click', function(e){e.preventDefault()}).data('module');
     if(dataModule) {require(dataModule.split(' '))}
 });
