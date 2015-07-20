@@ -311,3 +311,33 @@ if( ! function_exists('h_decode')){
     }
 }
 
+if( ! function_exists('recommend_article')){
+	function recommend_article($ids = array()){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
+		$article = $CI->MArticle->query($cond);
+		return $article;
+	}
+}
+
+if( ! function_exists('new_article')){
+	function recommend_article(){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$cond = array(array('status' => 1));
+		$article = $CI->MArticle->query($cond);
+		return $article;
+	}
+}
+
+if( ! function_exists('recommend_article')){
+	function recommend_article($ids = array()){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
+		$article = $CI->MArticle->query($cond);
+		return $article;
+	}
+}
+
