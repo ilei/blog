@@ -18,14 +18,9 @@
 	<div class="otherlink">
 		<h2>相关文章</h2>
 		<ul>
-			<?php $relates  = relate_article();foreach($relates as $key => $article):?>	
+            <?php $relates  = relate_article($article['cate_id']);foreach($relates as $key => $article):?>	
 			<li><a href="<?php echo site_url('article/' . $article['id']);?>" title="<?php echo $article['name'];?>"><?php echo $article['name'];?></a></li>
 			<?php endforeach;?>
 		</ul>
 	</div>
 </div>
-<script type="text/javascript">
-         $(function(){
-             SyntaxHighlighter.highlight();
-         });
-</script>
