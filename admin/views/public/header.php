@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/public/blog/css/animation.css?v=<?php echo $last_release;?>">
     <link rel="stylesheet" href="/public/blog/css/lrtk.css?v=<?php echo $last_release;?>">
     <link rel="stylesheet" href="/public/blog/css/view.css?v=<?php echo $last_release;?>">
+    <link rel="stylesheet" href="/public/blog/css/shCoreDefault.css?v=<?php echo $last_release;?>">
     <!--[if lt IE 9]>
     <script src="/public/blog/js/modernizr.js"></script>
     <![endif]-->
