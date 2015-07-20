@@ -34,7 +34,7 @@ class Article extends MY_Controller{
         $data['pager'] = ci_pager(site_url('article/list/0'), $total, 10, 4, '', site_url());
         $data['list'] = $list ? $list : array();
         $data['total'] = $total;
-        $data['pinyin'] = $pinyin;
+        $data['pinyin'] = $pinyin ? $pinyin : 'home';
         $this->display('front/article/index', $data);
     }
 
