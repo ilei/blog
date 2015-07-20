@@ -315,28 +315,53 @@ if( ! function_exists('recommend_article')){
 	function recommend_article($ids = array()){
 		$CI = &get_instance();
 		$CI->load->model('MArticle');
-		$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
-		$article = $CI->MArticle->query($cond);
+		$CI->load->library('memcached');
+		$key = 'recommend_article::' . implode('.', $ids);
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
+			$article = $CI->MArticle->query($cond);
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
 		return $article;
 	}
 }
 
 if( ! function_exists('new_article')){
-	function recommend_article(){
+	function new_article(){
 		$CI = &get_instance();
 		$CI->load->model('MArticle');
-		$cond = array(array('status' => 1));
-		$article = $CI->MArticle->query($cond);
+		$CI->load->library('memcached');
+		$key = 'new_article::';
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('status' => 1));
+			$article = $CI->MArticle->query($cond, 0, 9, array('updated_time' => 'desc'));
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
 		return $article;
 	}
 }
 
-if( ! function_exists('recommend_article')){
-	function recommend_article($ids = array()){
+if( ! function_exists('hots_article')){
+	function hots_article(){
 		$CI = &get_instance();
 		$CI->load->model('MArticle');
-		$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
-		$article = $CI->MArticle->query($cond);
+		$CI->load->library('memcached');
+		$key = 'new_article::';
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('status' => 1));
+			$article = $CI->MArticle->query($cond, 0, 9, array('hits' => 'desc'));
+			$cate_id = implode(',', array_column($article, 'cate_id'));
+			$cate = array(array('id IN (' . $cate_id . ')' => null));
+			$CI->load->model('MCategory');
+			$cates = $CI->MCategory->query($cate); 
+			$names = array_column($cates, 'name', 'id');
+			$pinyin = array_column($cates, 'pinyin', 'id');
+			foreach($article as &$value){
+				$value['cate_name'] = $names[$value['cate_id']];	
+				$value['cate_pinyin'] = $pinyin[$value['cate_id']];	
+			}
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
 		return $article;
 	}
 }

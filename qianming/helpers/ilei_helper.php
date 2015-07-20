@@ -313,15 +313,3 @@ if( ! function_exists('h_decode')){
     }
 }
 
-if( ! function_exists('recommend_article')){
-	function recommend_article($ids = array()){
-		$CI = &get_instance();
-		$CI->load->model('MArticle');
-		$cond = array(array('id IN' => $ids, 'status' => 1));
-		$article = $CI->MArticle->query($cond);
-		var_dump($article);
-		return $article;
-	}
-
-
-}
