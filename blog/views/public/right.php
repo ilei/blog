@@ -28,7 +28,8 @@
   </div>
   <div class="link">
     <h2>友情链接</h2>
-    <p><a href="http://www.smartlei.com">ilei的博客</a></p>
+    <p><a target="_blank" href="http://qianming.smartlei.com">QQ个性签名</a></p>
+    <p><a target="_blank"  href="http://waibao.smartlei.com">ilei的外包</a></p>
   </div>
 </div>
 <!--right end-->

@@ -12,7 +12,7 @@ class Article extends Admin_Controller{
         $data = $condition = array();
         $this->title[] = '文章列表-管理平台';
         $condition['status'] = 1;
-        $list = $this->MArticle->query(array($condition), 0, 10, array('updated_time' => 'desc'));
+        $list = $this->MArticle->query(array($condition), 0, 20, array('updated_time' => 'desc'));
         $data['list'] = $list;
         $this->display('admin/article/list', $data);
     }
