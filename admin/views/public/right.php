@@ -2,6 +2,8 @@
   <div class="tuijian">
     <h2>推荐文章</h2>
     <ol>
+	  <?php foreach(recommend_article(array(11,16,17,18,19)) as $article):?>
+	  <?php endforeach;?>
       <li><span><strong>1</strong></span><a href="/">有一种思念，是淡淡的幸福,一个心情一行文字</a></li>
       <li><span><strong>2</strong></span><a href="/">励志人生-要做一个潇洒的女人</a></li>
       <li><span><strong>3</strong></span><a href="/">女孩都有浪漫的小情怀——浪漫的求婚词</a></li>
