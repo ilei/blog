@@ -22,10 +22,10 @@
 <header>
   <nav id="nav">
     <ul>
-      <li><a href="<?php echo site_url();?>" >Home</a></li>
+	  <li><a id="<?php $pinyin == '' ? 'nav_current' : '';?>" href="<?php echo site_url();?>" >Home</a></li>
       <?php foreach($cate_right as $cate):?>
       <li>
-        <a href="<?php echo site_url('article/list/' . $cate['pinyin']);?>" target="_blank" title="<?php echo $cate['name'];?>">
+		<a id="<?php echo $pinyin == $cate['pinyin'] ? 'nav_current' : '';?>" href="<?php echo site_url('article/list/' . $cate['pinyin']);?>" target="_blank" title="<?php echo $cate['name'];?>">
             <?php echo $cate['name'];?>
         </a>
       </li>

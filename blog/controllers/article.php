@@ -34,6 +34,7 @@ class Article extends MY_Controller{
         $data['pager'] = ci_pager(site_url('article/list/0'), $total, 10, 4, '', site_url());
         $data['list'] = $list ? $list : array();
         $data['total'] = $total;
+        $data['pinyin'] = $pinyin;
         $this->display('front/article/index', $data);
     }
 
@@ -50,10 +51,12 @@ class Article extends MY_Controller{
         if(!$article){
             show_404();
         }
+		$cate = $this->MCategory->getBy('id', $article[0]['cate_id']);
         $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $article[0]['cate_id']));
         $this->breadcrumb->append_crumb($article[0]['name'], '###');
         $data = array();
         $data['article']       = $article[0];
+        $data['pinyin']        = $cate[0]['pinyin'];
         $this->meta_keywords[] = $article[0]['keywords'];
         $this->title[]         = $article[0]['name'];
         $this->meta_desc       = $article[0]['description'];

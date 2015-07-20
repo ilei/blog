@@ -1,15 +1,15 @@
 require.config({
-  paths : {'jquery' : '../js/jquery', 
+  paths : {
+		'jquery' : '../js/jquery', 
     'js':'../../blog/js/js',
-'silder':'../../blog/js/silder',
-'shcore':'../../blog/js/shCore',
+  	'shcore':'../../blog/js/shCore',
   }
-          , shim: {'js' : ['jquery'], 
-            'silder':['jquery'],
-'shcore':['jquery'],
-          }
+	, shim: {
+		'js' : ['jquery'], 
+		'shcore':['jquery'],
+  }
 });
-require(['jquery', 'js', 'silder', 'shcore'], function ($){
+require(['jquery', 'js', 'shcore'], function ($){
   var dataModule = $('body').delegate('a[href^="#"]', 'click', function(e){e.preventDefault()}).data('module');
   if(dataModule) {require(dataModule.split(' '))}
   $(function(){
