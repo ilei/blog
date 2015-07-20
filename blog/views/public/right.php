@@ -1,36 +1,45 @@
-<div class="right" id="c_right">
-  <div class="s_about">
-    <h2>关于博主</h2>
-    <img src="/static/images/ilei.jpg" width="230" height="230" alt="博主"/>
-    <p>博主：ray</p>
-    <p>职业：程序猿</p>
-    <p>简介：</p>
-    <p>lei,80末,程序猿一枚,2012年就开始敲代码了,目前仍然很菜..... 追随自己的兴趣,时刻保持激情. 
-    <div class="clear"></div>
-    </p>
+<aside>
+  <div class="tuijian">
+    <h2>推荐文章</h2>
+    <ol>
+	  <?php $articles = recommend_article(array(11,18, 15,16,19,17,14,3,13)); foreach($articles as $key  => $article):?>
+      <li><span><strong><?php echo $key+1;?></strong></span><a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
+	  <?php endforeach;?>
+    </ol>
   </div>
-  <!--栏目分类-->
-  <div class="lanmubox">
-    <div class="hd">
-      <ul><li>文章分类</li></ul>
-    </div>
-    <div class="bd">
-      <?php if(isset($cate_right) && $cate_right):?>
-      <ul class="tag_box">
-        <?php foreach($cate_right as $key => $cate):?>
-        <li><a href="<?php echo site_url('article/list/' . $cate['id']);?>">
-          <?php echo $cate['name'];?> <span><?php echo rand(50, 100);?></span>
-        </a></li>
-        <?php endforeach;?>
-      </ul>
-      <?php endif;?>
-    </div>
+  <div class="tuijian">
+    <h2>最新发布</h2>
+    <ol>
+	  <?php $articles = new_article(); foreach($articles as $key  => $article):?>
+      <li><span><strong><?php echo $key+1;?></strong></span><a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
+	  <?php endforeach;?>
+    </ol>
   </div>
-  <div class="link">
-    <h2>友情链接</h2>
-    <p><a target="_blank" href="http://qianming.smartlei.com">QQ个性签名</a></p>
-    <p><a target="_blank"  href="http://waibao.smartlei.com">ilei的外包</a></p>
+  <div class="clicks">
+    <h2>热门点击</h2>
+    <ol>
+	  <?php $articles = hots_article(); foreach($articles as $key  => $article):?>
+	  		<li><span><a href="<?php echo site_url('article/list/' . $article['cate_pinyin']);?>"><?php echo $article['cate_name'];?></a></span>
+			<a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
+	  <?php endforeach;?>
+    </ol>
   </div>
-</div>
-<!--right end-->
-
+  <div class="search">
+    <form class="searchform" method="get" action="#">
+      <input type="text" name="s" value="Search" onfocus="this.value=''" onblur="this.value='Search'">
+    </form>
+  </div>
+  <div class="viny">
+    <dl>
+      <dt class="art"><img src="/public/blog/images/artwork.png" alt="专辑"></dt>
+      <dd class="icon-song"><span></span>南方姑娘</dd>
+      <dd class="icon-artist"><span></span>歌手：赵雷</dd>
+      <dd class="icon-album"><span></span>所属专辑：《赵小雷》</dd>
+      <dd class="icon-like"><span></span><a href="###">喜欢</a></dd>
+      <dd class="music">
+        <audio src="/public/blog/images/nf.mp3" controls></audio>
+      </dd>
+      <!--也可以添加loop属性 音频加载到末尾时，会重新播放-->
+    </dl>
+  </div>
+</aside>

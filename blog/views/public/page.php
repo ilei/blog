@@ -1,9 +1,11 @@
 <?php $this->view('public/header');?>
 <!--content start-->
-<div id="content">
+<div id="mainbody">
+    <?php $this->view('public/top');?>
+    <div class="blogs">
     <?php $this->view($page);?>
     <?php $this->view('public/right');?>
-  <div class="clear"></div>
+    </div>
 </div>
  <!--content end-->
 <?php $this->view('public/footer');?>

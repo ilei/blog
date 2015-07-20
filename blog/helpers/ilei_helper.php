@@ -235,7 +235,7 @@ if ( ! function_exists('array_column')){
 }
 
 if ( ! function_exists('ci_pager')){
-    function ci_pager($url, $total, $page_size = 20, $uri_segment = 3, $suffix = '', $first_url = '', $anchor_class = 'item', $display_pages = TRUE, $rel = FALSE) {
+    function ci_pager($url, $total, $page_size = 20, $uri_segment = 3, $suffix = '', $first_url = '', $anchor_class = '', $display_pages = TRUE, $rel = FALSE) {
         $_CI =& get_instance();
         $_CI->load->library('pagination');
         if($total / $page_size > 40){
@@ -252,20 +252,20 @@ if ( ! function_exists('ci_pager')){
         $config['suffix']          = $suffix;
         $config['display_pages']   = $display_pages; 
         $config['anchor_class']    = $attr;
-        $config['first_link']      = '首页';
+        $config['first_link']      = '<<';
         $config['first_tag_open']  = '';
         $config['first_tag_close'] = '';
-        $config['last_link']       = '尾页';
+        $config['last_link']       = '>>';
         $config['last_tag_open']   = '';
         $config['last_tag_close']  = '';
-        $config['next_link']       = '下一页';
+        $config['next_link']       = '>';
         $config['next_tag_open']   = '';
         $config['next_tag_close']  = '';
-        $config['prev_link']       = '上一页';
+        $config['prev_link']       = '<';
         $config['prev_tag_open']   = '';
         $config['prev_tag_close']  = '';
-        $config['cur_tag_open']    = '<span class="current">';
-        $config['cur_tag_close']   = '</span>';
+        $config['cur_tag_open']    = '<b>';
+        $config['cur_tag_close']   = '</b>';
         $config['num_tag_open']    = '';
         $config['num_tag_close']   = '';
         $config['full_tag_open']   = '';
@@ -311,3 +311,75 @@ if( ! function_exists('h_decode')){
     }
 }
 
+if( ! function_exists('recommend_article')){
+	function recommend_article($ids = array()){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$CI->load->library('memcached');
+		$key = 'recommend_article::' . implode('.', $ids);
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('id IN (' . implode(',', $ids) . ')' => null, 'status' => 1));
+			$article = $CI->MArticle->query($cond);
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
+		return $article;
+	}
+}
+
+if( ! function_exists('new_article')){
+	function new_article(){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$CI->load->library('memcached');
+		$key = 'new_article::';
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('status' => 1));
+			$article = $CI->MArticle->query($cond, 0, 9, array('updated_time' => 'desc'));
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
+		return $article;
+	}
+}
+
+if( ! function_exists('hots_article')){
+	function hots_article(){
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$CI->load->library('memcached');
+		$key = 'hots_article::';
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('status' => 1));
+			$article = $CI->MArticle->query($cond, 0, 9, array('hits' => 'desc'));
+			$cate_id = implode(',', array_column($article, 'cate_id'));
+			$cate = array(array('id IN (' . $cate_id . ')' => null));
+			$CI->load->model('MCategory');
+			$cates = $CI->MCategory->query($cate); 
+			$names = array_column($cates, 'name', 'id');
+			$pinyin = array_column($cates, 'pinyin', 'id');
+			foreach($article as &$value){
+				$value['cate_name'] = $names[$value['cate_id']];	
+				$value['cate_pinyin'] = $pinyin[$value['cate_id']];	
+			}
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
+		return $article;
+	}
+}
+
+if( ! function_exists('relate_article')){
+	function relate_article($cate_id = 0, $article_id = 0){
+		if(!$cate_id || !$article_id){
+			return array();
+		}
+		$CI = &get_instance();
+		$CI->load->model('MArticle');
+		$CI->load->library('memcached');
+		$key = 'relate_article::'. $cate_id;
+		if(!($article = $CI->memcached->get($key))){
+			$cond = array(array('status' => 1, 'cate_id' => intval($cate_id)), 'id !=' => intval($article_id));
+			$article = $CI->MArticle->query($cond, 0, 6, array('updated_time' => 'desc'));
+			$CI->memcached->set($key, $article, 10*24*3600);
+		}
+		return $article;
+	}
+}
