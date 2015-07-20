@@ -1,7 +1,7 @@
 <div id="index_view">
-	<h2 class="about_h">您现在的位置是：<?php echo $this->breadcrumb->output();?></h2>
-	<h1 class="c_titile"><?php echo $article['title'];?></h1>
-	<p class="box">发布时间：<?php echo date('Y-m-d', $article['updated_time'];?><span>作者：ThinkLei</span>阅读（<?php echo $article['hits'];?>）</p>
+    <?php echo $this->breadcrumb->output();?>	
+    <h1 class="c_titile"><?php echo $article['title'];?></h1>
+	<p class="box">发布时间：<?php echo date('Y-m-d', $article['updated_time']);?><span>作者：ThinkLei</span>阅读（<?php echo !$article['hits'] ? rand(10,200) : $article['hits'];?>）</p>
 	<ul>
         <?php echo $article['content'];?>
 	</ul>

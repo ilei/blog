@@ -22,9 +22,9 @@ class Breadcrumb {
      * Options
      *
      */
-    private $_divider       = '&nbsp;>&nbsp;';
-    private $_tag_open      = '<div class="wz_text">当前位置&nbsp;:&nbsp;';
-    private $_tag_close     = '</div>';
+    private $_divider       = '>';
+    private $_tag_open      = '<h2 class="about_h">您现在的位置是:';
+    private $_tag_close     = '</h2>';
     
     /**
      * Constructor
