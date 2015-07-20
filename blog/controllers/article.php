@@ -51,6 +51,7 @@ class Article extends MY_Controller{
         if(!$article){
             show_404();
         }
+		$this->load->model('MCategory');
 		$cate = $this->MCategory->getBy('id', $article[0]['cate_id']);
         $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $article[0]['cate_id']));
         $this->breadcrumb->append_crumb($article[0]['name'], '###');
