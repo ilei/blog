@@ -74,7 +74,7 @@ if (defined('ENVIRONMENT'))
 	$application_folder = 'blog';
     $host = $_SERVER['HTTP_HOST'];
     if($host){
-        $arr = array('blog', 'qianming', 'waibao', 'admin');
+        $arr = array('blog', 'qianming', 'waibao', 'admin', 'test');
         $application_folder  = strtolower(current(explode('.', $host)));
         if(!in_array($application_folder, $arr)){
 	        $application_folder = 'blog';
