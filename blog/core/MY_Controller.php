@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Controller extends CI_Controller{
 
-    protected $meta_keywords = array('IT', '互联网', 'web技术', '博客', 'ilei');
+    protected $meta_keywords = array('IT', '互联网', 'web技术', '博客', 'ThinkLei');
     protected $meta_desc     = 'ilei是一个专业的、有趣的、专注于将Web开发技术尽可能简明易懂地描述出来的IT博客，在这里你可以轻松愉快地学习Web开发技术。内容涵盖了php,javascript,linux,node.js,mysql,git,等多种web开发语言及技术';
     protected $title         = array('ilei-享受编程-创造艺术');
 
