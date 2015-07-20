@@ -8,7 +8,7 @@
     </ol>
   </div>
   <div class="tuijian">
-    <h2>推荐文章</h2>
+    <h2>最新发布</h2>
     <ol>
 	  <?php $articles = new_article(); foreach($articles as $key  => $article):?>
       <li><span><strong><?php echo $key+1;?></strong></span><a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
@@ -18,10 +18,8 @@
   <div class="clicks">
     <h2>热门点击</h2>
     <ol>
-	  <?php $articles = new_article(); foreach($articles as $key  => $article):?>
-	  		<li><span><a href="<?php echo site_url('article/list/' . $article['cate_pinyin'];?>">
-			<?php echo $article['cate_name'];?>
-			</a></span>
+	  <?php $articles = hots_article(); foreach($articles as $key  => $article):?>
+	  		<li><span><a href="<?php echo site_url('article/list/' . $article['cate_pinyin']);?>"><?php echo $article['cate_name'];?></a></span>
 			<a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
 	  <?php endforeach;?>
     </ol>

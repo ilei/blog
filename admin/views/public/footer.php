@@ -12,11 +12,11 @@
       <dl>
         <dt><img src="/public/blog/images/s8.jpg">
         <dt>
-        <dd>DanceSmile
+        <dd>Cat
           <time>49分钟前</time>
         </dd>
-        <dd>在 <a href="http://www.yangqq.com/jstt/bj/2013-07-28/530.html" class="title">如果要学习web前端开发，需要学习什么？ </a>中评论：</dd>
-        <dd>文章非常详细，我很喜欢.前端的工程师很少，我记得几年前yahoo花高薪招聘前端也招不到</dd>
+        <dd>在 <a href="<?php echo site_url('article/17');?>" class="title">php延迟静态绑定详解</dd>
+        <dd>文章非常详细，受益匪浅啊 </dd>
       </dl>
     </div>
     <section class="flickr">
