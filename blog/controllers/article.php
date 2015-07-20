@@ -55,7 +55,8 @@ class Article extends MY_Controller{
 		$cate = $this->MCategory->getBy('id', $article[0]['cate_id']);
         $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $article[0]['cate_id']));
         $this->breadcrumb->append_crumb($article[0]['name'], '###');
-		$this->MArticle->update(intval($aid), array('hits = hits+1' => null));
+        $sql = "UPDATE `article` SET `hits` = hits+1 WHERE `id` = {intval($aid)}";
+		$this->MArticle->db->query($sql);
         $data = array();
         $data['article']       = $article[0];
         $data['pinyin']        = $cate[0]['pinyin'];
