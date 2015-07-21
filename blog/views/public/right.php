@@ -2,7 +2,7 @@
   <div class="tuijian">
     <h2>推荐文章</h2>
     <ol>
-	  <?php $articles = recommend_article(array(11,18, 15,16,19,17,14,3,13)); foreach($articles as $key  => $article):?>
+	  <?php $articles = recommend_article(array(11,18, 15,16,19,17,14,20,21)); foreach($articles as $key  => $article):?>
       <li><span><strong><?php echo $key+1;?></strong></span><a href="<?php echo site_url('article/' . $article['id']);?>"><?php echo $article['name'];?></a></li>
 	  <?php endforeach;?>
     </ol>

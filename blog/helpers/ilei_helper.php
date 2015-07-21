@@ -335,7 +335,7 @@ if( ! function_exists('new_article')){
 		if(!($article = $CI->memcached->get($key))){
 			$cond = array(array('status' => 1));
 			$article = $CI->MArticle->query($cond, 0, 9, array('updated_time' => 'desc'));
-			$CI->memcached->set($key, $article, 10*24*3600);
+			$CI->memcached->set($key, $article, 24*3600);
 		}
 		return $article;
 	}
@@ -360,7 +360,7 @@ if( ! function_exists('hots_article')){
 				$value['cate_name'] = $names[$value['cate_id']];	
 				$value['cate_pinyin'] = $pinyin[$value['cate_id']];	
 			}
-			$CI->memcached->set($key, $article, 10*24*3600);
+			$CI->memcached->set($key, $article, 24*3600);
 		}
 		return $article;
 	}
@@ -378,7 +378,7 @@ if( ! function_exists('relate_article')){
 		if(!($article = $CI->memcached->get($key))){
 			$cond = array(array('status' => 1, 'cate_id' => intval($cate_id)), 'id !=' => intval($article_id));
 			$article = $CI->MArticle->query($cond, 0, 6, array('updated_time' => 'desc'));
-			$CI->memcached->set($key, $article, 10*24*3600);
+			$CI->memcached->set($key, $article,24*3600);
 		}
 		return $article;
 	}

@@ -20,7 +20,7 @@ class Article extends MY_Controller{
         $condition[] = array('status' => 1);
         $this->load->model('MCategory');
         $cate = $this->MCategory->getBy('pinyin', trim($pinyin));
-        if(intval($cate)){
+        if($cate){
             $condition[]['cate_id'] = intval($cate[0]['id']);
         }
         $key       = 'article::lists::_cate_' . $pinyin . 'offset_'  .$offset;
@@ -28,8 +28,8 @@ class Article extends MY_Controller{
         if(!($list = $this->memcached->get($key)) || !($total = $this->memcached->get($key_total))){
             $list = $this->MArticle->query($condition, intval($offset) , 10, array('updated_time' => 'desc'));
             $total = $this->MArticle->count($condition);
-            $this->memcached->set($key, $list);
-            $this->memcached->set($key_total, $total);
+            $this->memcached->set($key, $list, 24*3600);
+            $this->memcached->set($key_total, $total, 24*3600);
         }
         $data['pager'] = ci_pager(site_url('article/list/0'), $total, 10, 4, '', site_url());
         $data['list'] = $list ? $list : array();
@@ -53,7 +53,7 @@ class Article extends MY_Controller{
         }
 		$this->load->model('MCategory');
 		$cate = $this->MCategory->getBy('id', $article[0]['cate_id']);
-        $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $article[0]['cate_id']));
+        $this->breadcrumb->append_crumb($article[0]['cate_name'], site_url('article/list/' . $cate[0]['pinyin']));
         $this->breadcrumb->append_crumb($article[0]['name'], '###');
         $sql = "UPDATE `article` SET `hits` = hits+1 WHERE `id` = {intval($aid)}";
 		$this->MArticle->db->query($sql);
