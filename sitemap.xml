@@ -1,101 +1,165 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-<url>
-  <loc>http://www.smartlei.com/</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/18</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/17</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/16</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/15</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/14</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/13</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/11</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/3</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/4</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/5</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/6</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/10</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/12</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/9</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/5</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/6</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/7</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/8</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/9</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/10</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/11</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://www.smartlei.com/article/list/12</loc>
-  <changefreq>weekly</changefreq>
-</url>
+<?xml version="1.0" encoding="utf-8"?>
+<urlset>
+  <url>
+    <loc>http://www.smartlei.com/</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/php</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/mysql</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/cache</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/node</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/js</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/os</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/git</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/23</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/22</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/21</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/20</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/19</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/5</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/18</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/17</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/16</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/15</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/list/0/10</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/11</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/14</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/12</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/13</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com/article/6</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://qianming.smartlei.com</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://waibao.smartlei.com</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://www.smartlei.com</loc>
+    <lastmod>2015-07-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
