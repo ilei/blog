@@ -1,6 +1,6 @@
 <?php 
 $urls = array(
-    'http://www.smartlei.com/article/list/mysql',
+    'http://www.smartlei.com/article/37',
 );
 $api = 'http://data.zz.baidu.com/urls?site=www.smartlei.com&token=yZqU5N8XbiKyZXI0';
 $ch = curl_init();

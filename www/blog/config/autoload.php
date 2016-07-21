@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database', 'session', 'auth');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'config', 'ilei');
+$autoload['helper'] = array('url', 'config', 'ilei', 'download');
 
 
 /*

@@ -1,8 +1,8 @@
 require.config({
-  paths : {'jquery' : '../js/jquery', 'shcore':'../../blog/js/shCore'}
+  paths : {'jquery' : '../js/jquery', 'shcore':'../../blog/js/shCore', 'canvas':'../../blog/js/canvas-nest.min'}
           , shim: {'js' : ['jquery'], 'shcore':['jquery']}
 });
-require(['jquery', 'shcore'], function ($){
+require(['jquery', 'shcore', 'canvas'], function ($){
   var dataModule = $('body').delegate('a[href^="#"]', 'click', function(e){e.preventDefault()}).data('module');
   if(dataModule) {require(dataModule.split(' '))}
   $(function(){
